@@ -90,11 +90,11 @@ class PointsController {
       .split(',')
       .map((item: string) => Number(item.trim()))
       .map((item_id: number) => {
-      return {
-        item_id,
-        point_id
-      }
-    })
+        return {
+          item_id,
+          point_id
+        }
+      })
   
     await trx('point_items').insert(pointItems)
 
